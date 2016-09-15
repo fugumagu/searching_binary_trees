@@ -40,7 +40,7 @@ class BinaryTree
 	attr_accessor :root, :arr, :node_count, :height, :bottom_row, :bottom_row_capacity
 
 	def initialize(arr)
-		puts "Building binary tree..."
+		puts "\n\n\nBuilding binary tree...\n\n"
 		@arr = arr
 		@node_count = arr.length
 		@height = Math::log2(@node_count).floor
@@ -262,7 +262,9 @@ class BinaryTree
 		if node != @root
 			return search
 		else node = @root
-			puts search.nil? ? "#{value} not found" : "Found #{value} at node #{search.index} (#{search.coordinates})"
+			puts "Searching binary tree for #{value}"
+			puts search.nil? ? "#{value} was not found" : "Found #{value} at node #{search.index} (#{search.coordinates})"
+			puts "\n\n\n"
 		end
 	end
 end
